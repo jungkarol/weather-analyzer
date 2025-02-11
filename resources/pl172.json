@@ -1,8 +1,33 @@
 [
   {
-    "name": "Katowice",
-    "lat": 50.2708,
-    "lon": 19.0399
+    "name": "Warszawa",
+    "lat": 52.2297,
+    "lon": 21.0122
+  },
+  {
+    "name": "Kraków",
+    "lat": 50.0647,
+    "lon": 19.9450
+  },
+  {
+    "name": "Łódź",
+    "lat": 51.7592,
+    "lon": 19.4550
+  },
+  {
+    "name": "Wrocław",
+    "lat": 51.1079,
+    "lon": 17.0385
+  },
+  {
+    "name": "Poznań",
+    "lat": 52.4064,
+    "lon": 16.9252
+  },
+  {
+    "name": "Gdańsk",
+    "lat": 54.3520,
+    "lon": 18.6466
   },
   {
     "name": "Szczecin",
@@ -12,11 +37,826 @@
   {
     "name": "Bydgoszcz",
     "lat": 53.1235,
-    "lon": 18.0084
+    "lon": 18.0076
   },
   {
     "name": "Lublin",
     "lat": 51.2465,
     "lon": 22.5684
+  },
+  {
+    "name": "Białystok",
+    "lat": 53.1325,
+    "lon": 23.1688
+  },
+  {
+    "name": "Katowice",
+    "lat": 50.2708,
+    "lon": 19.0399
+  },
+  {
+    "name": "Gdynia",
+    "lat": 54.5189,
+    "lon": 18.5305
+  },
+  {
+    "name": "Częstochowa",
+    "lat": 50.8110,
+    "lon": 19.1203
+  },
+  {
+    "name": "Radom",
+    "lat": 51.4027,
+    "lon": 21.1471
+  },
+  {
+    "name": "Sosnowiec",
+    "lat": 50.2863,
+    "lon": 19.1041
+  },
+  {
+    "name": "Toruń",
+    "lat": 53.0138,
+    "lon": 18.5984
+  },
+  {
+    "name": "Kielce",
+    "lat": 50.8661,
+    "lon": 20.6286
+  },
+  {
+    "name": "Rzeszów",
+    "lat": 50.0413,
+    "lon": 21.9990
+  },
+  {
+    "name": "Gliwice",
+    "lat": 50.2945,
+    "lon": 18.6714
+  },
+  {
+    "name": "Zabrze",
+    "lat": 50.3249,
+    "lon": 18.7857
+  },
+  {
+    "name": "Olsztyn",
+    "lat": 53.7799,
+    "lon": 20.4942
+  },
+  {
+    "name": "Bielsko-Biała",
+    "lat": 49.8224,
+    "lon": 19.0584
+  },
+  {
+    "name": "Bytom",
+    "lat": 50.3484,
+    "lon": 18.9157
+  },
+  {
+    "name": "Zielona Góra",
+    "lat": 51.9356,
+    "lon": 15.5062
+  },
+  {
+    "name": "Rybnik",
+    "lat": 50.0971,
+    "lon": 18.5404
+  },
+  {
+    "name": "Ruda Śląska",
+    "lat": 50.2558,
+    "lon": 18.8563
+  },
+  {
+    "name": "Opole",
+    "lat": 50.6751,
+    "lon": 17.9213
+  },
+  {
+    "name": "Tychy",
+    "lat": 50.1372,
+    "lon": 19.0023
+  },
+  {
+    "name": "Gorzów Wielkopolski",
+    "lat": 52.7368,
+    "lon": 15.2288
+  },
+  {
+    "name": "Dąbrowa Górnicza",
+    "lat": 50.3216,
+    "lon": 19.2049
+  },
+  {
+    "name": "Płock",
+    "lat": 52.5463,
+    "lon": 19.7065
+  },
+  {
+    "name": "Elbląg",
+    "lat": 54.1522,
+    "lon": 19.4088
+  },
+  {
+    "name": "Wałbrzych",
+    "lat": 50.7840,
+    "lon": 16.2843
+  },
+  {
+    "name": "Włocławek",
+    "lat": 52.6481,
+    "lon": 19.0678
+  },
+  {
+    "name": "Tarnów",
+    "lat": 50.0138,
+    "lon": 20.9860
+  },
+  {
+    "name": "Chorzów",
+    "lat": 50.3058,
+    "lon": 18.9742
+  },
+  {
+    "name": "Koszalin",
+    "lat": 54.1944,
+    "lon": 16.1722
+  },
+  {
+    "name": "Kalisz",
+    "lat": 51.7672,
+    "lon": 18.0858
+  },
+  {
+    "name": "Legnica",
+    "lat": 51.2070,
+    "lon": 16.1550
+  },
+  {
+    "name": "Grudziądz",
+    "lat": 53.4845,
+    "lon": 18.7530
+  },
+  {
+    "name": "Jaworzno",
+    "lat": 50.2057,
+    "lon": 19.2744
+  },
+  {
+    "name": "Słupsk",
+    "lat": 54.4641,
+    "lon": 17.0287
+  },
+  {
+    "name": "Jastrzębie-Zdrój",
+    "lat": 49.9556,
+    "lon": 18.5748
+  },
+  {
+    "name": "Nowy Sącz",
+    "lat": 49.6212,
+    "lon": 20.6970
+  },
+  {
+    "name": "Jelenia Góra",
+    "lat": 50.9044,
+    "lon": 15.7194
+  },
+  {
+    "name": "Konin",
+    "lat": 52.2234,
+    "lon": 18.2510
+  },
+  {
+    "name": "Piotrków Trybunalski",
+    "lat": 51.4059,
+    "lon": 19.7033
+  },
+  {
+    "name": "Siedlce",
+    "lat": 52.1677,
+    "lon": 22.2903
+  },
+  {
+    "name": "Lubin",
+    "lat": 51.4009,
+    "lon": 16.2015
+  },
+  {
+    "name": "Inowrocław",
+    "lat": 52.8021,
+    "lon": 18.2616
+  },
+  {
+    "name": "Mysłowice",
+    "lat": 50.2070,
+    "lon": 19.1664
+  },
+  {
+    "name": "Gniezno",
+    "lat": 52.5343,
+    "lon": 17.5826
+  },
+  {
+    "name": "Ostrowiec Świętokrzyski",
+    "lat": 50.9391,
+    "lon": 21.3853
+  },
+  {
+    "name": "Siemianowice Śląskie",
+    "lat": 50.3272,
+    "lon": 19.0295
+  },
+  {
+    "name": "Suwałki",
+    "lat": 54.0984,
+    "lon": 22.9332
+  },
+  {
+    "name": "Ostrołęka",
+    "lat": 53.0862,
+    "lon": 21.5596
+  },
+  {
+    "name": "Stargard",
+    "lat": 53.3368,
+    "lon": 15.0491
+  },
+  {
+    "name": "Pabianice",
+    "lat": 51.6642,
+    "lon": 19.3542
+  },
+  {
+    "name": "Tarnowskie Góry",
+    "lat": 50.4453,
+    "lon": 18.8616
+  },
+  {
+    "name": "Racibórz",
+    "lat": 50.0924,
+    "lon": 18.2199
+  },
+  {
+    "name": "Skierniewice",
+    "lat": 51.9757,
+    "lon": 20.1466
+  },
+  {
+    "name": "Pruszków",
+    "lat": 52.1705,
+    "lon": 20.8066
+  },
+  {
+    "name": "Świdnica",
+    "lat": 50.8438,
+    "lon": 16.4888
+  },
+  {
+    "name": "Zamość",
+    "lat": 50.7231,
+    "lon": 23.2513
+  },
+  {
+    "name": "Tomaszów Mazowiecki",
+    "lat": 51.5313,
+    "lon": 20.0080
+  },
+  {
+    "name": "Leszno",
+    "lat": 51.8505,
+    "lon": 16.5740
+  },
+  {
+    "name": "Zgierz",
+    "lat": 51.8557,
+    "lon": 19.4064
+  },
+  {
+    "name": "Piekary Śląskie",
+    "lat": 50.3753,
+    "lon": 18.9280
+  },
+  {
+    "name": "Biała Podlaska",
+    "lat": 52.0324,
+    "lon": 23.1167
+  },
+  {
+    "name": "Chełm",
+    "lat": 51.1431,
+    "lon": 23.4712
+  },
+  {
+    "name": "Ełk",
+    "lat": 53.8234,
+    "lon": 22.3646
+  },
+  {
+    "name": "Bełchatów",
+    "lat": 51.3682,
+    "lon": 19.3564
+  },
+  {
+    "name": "Tczew",
+    "lat": 54.0924,
+    "lon": 18.7779
+  },
+  {
+    "name": "Świętochłowice",
+    "lat": 50.2970,
+    "lon": 18.9173
+  },
+  {
+    "name": "Przemyśl",
+    "lat": 49.7840,
+    "lon": 22.7671
+  },
+  {
+    "name": "Będzin",
+    "lat": 50.3211,
+    "lon": 19.1251
+  },
+  {
+    "name": "Łomża",
+    "lat": 53.1781,
+    "lon": 22.0593
+  },
+  {
+    "name": "Zawiercie",
+    "lat": 50.4891,
+    "lon": 19.4187
+  },
+  {
+    "name": "Mielec",
+    "lat": 50.2868,
+    "lon": 21.4230
+  },
+  {
+    "name": "Piła",
+    "lat": 53.1518,
+    "lon": 16.7378
+  },
+  {
+    "name": "Kędzierzyn-Koźle",
+    "lat": 50.3491,
+    "lon": 18.2262
+  },
+  {
+    "name": "Tarnobrzeg",
+    "lat": 50.5730,
+    "lon": 21.6795
+  },
+  {
+    "name": "Legionowo",
+    "lat": 52.4035,
+    "lon": 20.9270
+  },
+  {
+    "name": "Ostrów Wielkopolski",
+    "lat": 51.6510,
+    "lon": 17.8064
+  },
+  {
+    "name": "Knurów",
+    "lat": 50.2198,
+    "lon": 18.6575
+  },
+  {
+    "name": "Rumia",
+    "lat": 54.5708,
+    "lon": 18.3870
+  },
+  {
+    "name": "Luboń",
+    "lat": 52.3361,
+    "lon": 16.8936
+  },
+  {
+    "name": "Marki",
+    "lat": 52.3247,
+    "lon": 21.1040
+  },
+  {
+    "name": "Świnoujście",
+    "lat": 53.9100,
+    "lon": 14.2471
+  },
+  {
+    "name": "Kołobrzeg",
+    "lat": 54.1758,
+    "lon": 15.5834
+  },
+  {
+    "name": "Ciechanów",
+    "lat": 52.8817,
+    "lon": 20.6190
+  },
+  {
+    "name": "Żory",
+    "lat": 50.0450,
+    "lon": 18.7006
+  },
+  {
+    "name": "Oświęcim",
+    "lat": 50.0343,
+    "lon": 19.2092
+  },
+  {
+    "name": "Pruszcz Gdański",
+    "lat": 54.2627,
+    "lon": 18.6365
+  },
+  {
+    "name": "Goleniów",
+    "lat": 53.5638,
+    "lon": 14.8289
+  },
+  {
+    "name": "Wejherowo",
+    "lat": 54.6051,
+    "lon": 18.2353
+  },
+  {
+    "name": "Bartoszyce",
+    "lat": 54.2538,
+    "lon": 20.8088
+  },
+  {
+    "name": "Chojnice",
+    "lat": 53.6945,
+    "lon": 17.5565
+  },
+  {
+    "name": "Kłodzko",
+    "lat": 50.4340,
+    "lon": 16.6612
+  },
+  {
+    "name": "Bochnia",
+    "lat": 49.9694,
+    "lon": 20.4300
+  },
+  {
+    "name": "Zakopane",
+    "lat": 49.2992,
+    "lon": 19.9496
+  },
+  {
+    "name": "Gorlice",
+    "lat": 49.6684,
+    "lon": 21.1601
+  },
+  {
+    "name": "Bielsk Podlaski",
+    "lat": 52.7835,
+    "lon": 23.1917
+  },
+  {
+    "name": "Nowa Ruda",
+    "lat": 50.5820,
+    "lon": 16.5004
+  },
+  {
+    "name": "Środa Wielkopolska",
+    "lat": 52.2280,
+    "lon": 17.2768
+  },
+  {
+    "name": "Oborniki",
+    "lat": 52.6474,
+    "lon": 16.8143
+  },
+  {
+    "name": "Lubartów",
+    "lat": 51.4605,
+    "lon": 22.6101
+  },
+  {
+    "name": "Zduńska Wola",
+    "lat": 51.5994,
+    "lon": 18.9393
+  },
+  {
+    "name": "Śrem",
+    "lat": 52.0887,
+    "lon": 17.0155
+  },
+  {
+    "name": "Busko-Zdrój",
+    "lat": 50.4706,
+    "lon": 20.7194
+  },
+  {
+    "name": "Grodzisk Mazowiecki",
+    "lat": 52.1031,
+    "lon": 20.6330
+  },
+  {
+    "name": "Mińsk Mazowiecki",
+    "lat": 52.1801,
+    "lon": 21.5700
+  },
+  {
+    "name": "Kraśnik",
+    "lat": 50.9237,
+    "lon": 22.2273
+  },
+  {
+    "name": "Sochaczew",
+    "lat": 52.2293,
+    "lon": 20.2383
+  },
+  {
+    "name": "Bolesławiec",
+    "lat": 51.2659,
+    "lon": 15.5646
+  },
+  {
+    "name": "Krotoszyn",
+    "lat": 51.6982,
+    "lon": 17.4388
+  },
+  {
+    "name": "Dzierżoniów",
+    "lat": 50.7286,
+    "lon": 16.6510
+  },
+  {
+    "name": "Łowicz",
+    "lat": 52.1094,
+    "lon": 19.9457
+  },
+  {
+    "name": "Lębork",
+    "lat": 54.5486,
+    "lon": 17.7504
+  },
+  {
+    "name": "Żyrardów",
+    "lat": 52.0559,
+    "lon": 20.4467
+  },
+  {
+    "name": "Police",
+    "lat": 53.5525,
+    "lon": 14.5719
+  },
+  {
+    "name": "Kłobuck",
+    "lat": 50.9074,
+    "lon": 18.9358
+  },
+  {
+    "name": "Szczytno",
+    "lat": 53.5627,
+    "lon": 20.9966
+  },
+  {
+    "name": "Wieluń",
+    "lat": 51.2205,
+    "lon": 18.5720
+  },
+  {
+    "name": "Gryfice",
+    "lat": 53.9168,
+    "lon": 15.1942
+  },
+  {
+    "name": "Prudnik",
+    "lat": 50.3223,
+    "lon": 17.5797
+  },
+  {
+    "name": "Świebodzin",
+    "lat": 52.2494,
+    "lon": 15.5331
+  },
+  {
+    "name": "Trzebnica",
+    "lat": 51.3106,
+    "lon": 17.0642
+  },
+  {
+    "name": "Otwock",
+    "lat": 52.1053,
+    "lon": 21.2625
+  },
+  {
+    "name": "Sopot",
+    "lat": 54.4416,
+    "lon": 18.5601
+  },
+  {
+    "name": "Polkowice",
+    "lat": 51.5028,
+    "lon": 16.0713
+  },
+  {
+    "name": "Kościan",
+    "lat": 52.0880,
+    "lon": 16.6512
+  },
+  {
+    "name": "Nysa",
+    "lat": 50.4701,
+    "lon": 17.3313
+  },
+  {
+    "name": "Kępno",
+    "lat": 51.2788,
+    "lon": 17.9891
+  },
+  {
+    "name": "Białogard",
+    "lat": 54.0041,
+    "lon": 15.9933
+  },
+  {
+    "name": "Biskupiec",
+    "lat": 53.8672,
+    "lon": 20.9499
+  },
+  {
+    "name": "Piaseczno",
+    "lat": 52.0779,
+    "lon": 21.0238
+  },
+  {
+    "name": "Pszczyna",
+    "lat": 49.9752,
+    "lon": 18.9530
+  },
+  {
+    "name": "Nakło nad Notecią",
+    "lat": 53.1423,
+    "lon": 17.6026
+  },
+  {
+    "name": "Wodzisław Śląski",
+    "lat": 50.0037,
+    "lon": 18.4730
+  },
+  {
+    "name": "Radomsko",
+    "lat": 51.0668,
+    "lon": 19.4448
+  },
+  {
+    "name": "Puławy",
+    "lat": 51.4164,
+    "lon": 21.9690
+  },
+  {
+    "name": "Zakroczym",
+    "lat": 52.4302,
+    "lon": 20.6115
+  },
+  {
+    "name": "Supraśl",
+    "lat": 53.2424,
+    "lon": 23.3407
+  },
+  {
+    "name": "Węgrów",
+    "lat": 52.3971,
+    "lon": 22.0132
+  },
+  {
+    "name": "Augustów",
+    "lat": 53.8437,
+    "lon": 22.9793
+  },
+  {
+    "name": "Grajewo",
+    "lat": 53.6479,
+    "lon": 22.4559
+  },
+  {
+    "name": "Brodnica",
+    "lat": 53.2599,
+    "lon": 19.4099
+  },
+  {
+    "name": "Kwidzyn",
+    "lat": 53.7245,
+    "lon": 18.9324
+  },
+  {
+    "name": "Świecie",
+    "lat": 53.4097,
+    "lon": 18.4470
+  },
+  {
+    "name": "Starogard Gdański",
+    "lat": 53.9630,
+    "lon": 18.5270
+  },
+  {
+    "name": "Malbork",
+    "lat": 54.0350,
+    "lon": 19.0260
+  },
+  {
+    "name": "Myślenice",
+    "lat": 49.8338,
+    "lon": 19.9387
+  },
+  {
+    "name": "Nowy Targ",
+    "lat": 49.4779,
+    "lon": 20.0321
+  },
+  {
+    "name": "Rabka-Zdrój",
+    "lat": 49.6070,
+    "lon": 19.9677
+  },
+  {
+    "name": "Złotów",
+    "lat": 53.3646,
+    "lon": 17.0406
+  },
+  {
+    "name": "Sandomierz",
+    "lat": 50.6825,
+    "lon": 21.7487
+  },
+  {
+    "name": "Kętrzyn",
+    "lat": 54.0763,
+    "lon": 21.3753
+  },
+  {
+    "name": "Kazimierz Dolny",
+    "lat": 51.3240,
+    "lon": 21.9473
+  },
+  {
+    "name": "Brzeg",
+    "lat": 50.8600,
+    "lon": 17.4670
+  },
+  {
+    "name": "Strzelce Opolskie",
+    "lat": 50.5103,
+    "lon": 18.3001
+  },
+  {
+    "name": "Zambrów",
+    "lat": 52.9852,
+    "lon": 22.2440
+  },
+  {
+    "name": "Lubań",
+    "lat": 51.1146,
+    "lon": 15.2852
+  },
+  {
+    "name": "Hrubieszów",
+    "lat": 50.8051,
+    "lon": 23.8920
+  },
+  {
+    "name": "Mońki",
+    "lat": 53.4056,
+    "lon": 22.8020
+  },
+  {
+    "name": "Mikołów",
+    "lat": 50.1711,
+    "lon": 18.9051
+  },
+  {
+    "name": "Orzesze",
+    "lat": 50.1492,
+    "lon": 18.7837
+  },
+  {
+    "name": "Ustka",
+    "lat": 54.5808,
+    "lon": 16.8619
+  },
+  {
+    "name": "Darłowo",
+    "lat": 54.4214,
+    "lon": 16.4104
+  },
+  {
+    "name": "Międzyzdroje",
+    "lat": 53.9282,
+    "lon": 14.4510
+  },
+  {
+    "name": "Człuchów",
+    "lat": 53.6660,
+    "lon": 17.3663
+  },
+  {
+    "name": "Drawsko Pomorskie",
+    "lat": 53.5329,
+    "lon": 15.8016
   }
 ]
