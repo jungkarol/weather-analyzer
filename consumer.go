@@ -4,14 +4,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"sync"
 	"time"
 	"weather-analyzer/models"
 )
 
-func consumer(weatherDataChan <-chan models.WeatherData, resultsChan chan<- models.Results, wg *sync.WaitGroup) {
-	defer wg.Done()
-
+func consumer(ID int, weatherDataChan <-chan models.WeatherData, resultsChan chan<- models.Results) {
 	var hottestCity models.WeatherComputedData
 	var foggiestCity models.WeatherComputedData
 	var clearestCity models.WeatherComputedData
@@ -22,8 +19,7 @@ func consumer(weatherDataChan <-chan models.WeatherData, resultsChan chan<- mode
 		foggyDays := countFoggyDays(&weatherData)
 		sunnyDays := countSunnyDays(&weatherData)
 		elapsedTime := float64(time.Since(startTime).Nanoseconds()) / 1_000_000.0
-		fmt.Printf("Przetwarzanie %s zakończone w %.5f ms\n", weatherData.City.Name, elapsedTime)
-		fmt.Printf("For %s avgTemp: %f foggyDays: %d sunnyDays: %d\n", weatherData.City.Name, avgTemp, foggyDays, sunnyDays)
+		fmt.Printf("Consumer [%d] Przetwarzanie %s zakończone w %.5f ms\n", ID, weatherData.City.Name, elapsedTime)
 
 		computedData := models.WeatherComputedData{
 			City:      weatherData.City,

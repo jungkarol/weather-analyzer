@@ -5,15 +5,12 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"sync"
 	"time"
 	"weather-analyzer/config"
 	"weather-analyzer/models"
 )
 
-func producer(cities []models.City, weatherDataChan chan<- models.WeatherData, wg *sync.WaitGroup) {
-	defer wg.Done()
-
+func producer(cities []models.City, weatherDataChan chan<- models.WeatherData) {
 	for _, city := range cities {
 		startTime := time.Now()
 		weatherData, err := getWeatherData(city)

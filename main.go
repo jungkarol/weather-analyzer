@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"sync"
+	"weather-analyzer/config"
 	"weather-analyzer/models"
 )
 
@@ -17,25 +18,31 @@ func main() {
 	}
 
 	weatherDataChan := make(chan models.WeatherData, len(cities))
-	resultsChan := make(chan models.Results, 1)
+	resultsChan := make(chan models.Results)
 
-	var wg sync.WaitGroup
-
-	wg.Add(1)
 	go func() {
-		producer(cities, weatherDataChan, &wg)
+		producer(cities, weatherDataChan)
 		close(weatherDataChan)
 	}()
 
-	wg.Add(1)
+	var consumersWg sync.WaitGroup
+	for i := 0; i < config.Consumers; i++ {
+		consumersWg.Add(1)
+		go func(consumerId int) {
+			defer consumersWg.Done()
+			consumer(consumerId, weatherDataChan, resultsChan)
+		}(i)
+	}
+
 	go func() {
-		consumer(weatherDataChan, resultsChan, &wg)
+		consumersWg.Wait()
 		close(resultsChan)
 	}()
 
-	wg.Wait()
-
-	results := <-resultsChan
+	var results models.Results
+	for r := range resultsChan {
+		results = r
+	}
 
 	saveResultsToFile(results)
 
