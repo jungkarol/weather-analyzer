@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"sync"
+	"time"
 	"weather-analyzer/config"
 	"weather-analyzer/models"
 )
@@ -17,34 +18,44 @@ func main() {
 		return
 	}
 
+	citiesChan := make(chan models.City, len(cities))
+	for _, city := range cities {
+		citiesChan <- city
+	}
+	close(citiesChan)
+
 	weatherDataChan := make(chan models.WeatherData, len(cities))
-	resultsChan := make(chan models.Results)
 
-	go func() {
-		producer(cities, weatherDataChan)
-		close(weatherDataChan)
-	}()
-
-	var consumersWg sync.WaitGroup
-	for i := 0; i < config.Consumers; i++ {
-		consumersWg.Add(1)
-		go func(consumerId int) {
-			defer consumersWg.Done()
-			consumer(consumerId, weatherDataChan, resultsChan)
+	var producersWg sync.WaitGroup
+	for i := 0; i < config.Producers; i++ {
+		producersWg.Add(1)
+		go func(producerId int) {
+			defer producersWg.Done()
+			producer(producerId, citiesChan, weatherDataChan)
 		}(i)
 	}
 
 	go func() {
-		consumersWg.Wait()
-		close(resultsChan)
+		producersWg.Wait()
+		close(weatherDataChan)
 	}()
 
-	var results models.Results
-	for r := range resultsChan {
-		results = r
+	startTime := time.Now()
+
+	var consumersWg sync.WaitGroup
+	finalResults := models.Results{}
+	var resultsMutex sync.Mutex
+
+	for i := 0; i < config.Consumers; i++ {
+		consumersWg.Add(1)
+		go func(consumerId int) {
+			defer consumersWg.Done()
+			consumer(consumerId, weatherDataChan, &finalResults, &resultsMutex)
+		}(i)
 	}
 
-	saveResultsToFile(results)
+	consumersWg.Wait()
 
-	fmt.Println("Proces zakończony!")
+	fmt.Printf("Czas przetwarzania przez konsumentów: %v\n", time.Since(startTime))
+	saveResultsToFile(finalResults)
 }

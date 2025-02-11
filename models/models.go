@@ -14,9 +14,12 @@ type WeatherComputedData struct {
 }
 
 type Results struct {
-	HottestCity  string `json:"hottest_city"`
-	FoggiestCity string `json:"foggiest_city"`
-	ClearestCity string `json:"clearest_city"`
+	HottestCity    string  `json:"hottest_city"`
+	FoggiestCity   string  `json:"foggiest_city"`
+	ClearestCity   string  `json:"clearest_city"`
+	MaxTemperature float64 `json:"-"`
+	MaxFoggyDays   int     `json:"-"`
+	MaxSunnyDays   int     `json:"-"`
 }
 
 type WeatherData struct {

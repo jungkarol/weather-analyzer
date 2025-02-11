@@ -10,16 +10,16 @@ import (
 	"weather-analyzer/models"
 )
 
-func producer(cities []models.City, weatherDataChan chan<- models.WeatherData) {
-	for _, city := range cities {
+func producer(ID int, citiesChan <-chan models.City, weatherDataChan chan<- models.WeatherData) {
+	for city := range citiesChan {
 		startTime := time.Now()
 		weatherData, err := getWeatherData(city)
 		if err != nil {
-			fmt.Printf("Błąd pobierania dla %s: %v\n", city.Name, err)
+			fmt.Printf("Producer [%d] Błąd pobierania dla %s: %v\n", ID, city.Name, err)
 			continue
 		}
 		elapsedTime := time.Since(startTime)
-		fmt.Printf("Pobranie zakończone dla %s w %s\n", city.Name, elapsedTime)
+		fmt.Printf("Producer [%d] Pobranie zakończone dla %s w %s\n", ID, city.Name, elapsedTime)
 		weatherData.City = city
 		weatherDataChan <- *weatherData
 	}

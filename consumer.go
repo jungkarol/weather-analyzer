@@ -4,22 +4,17 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"sync"
 	"time"
 	"weather-analyzer/models"
 )
 
-func consumer(ID int, weatherDataChan <-chan models.WeatherData, resultsChan chan<- models.Results) {
-	var hottestCity models.WeatherComputedData
-	var foggiestCity models.WeatherComputedData
-	var clearestCity models.WeatherComputedData
-
+func consumer(ID int, weatherDataChan <-chan models.WeatherData, finalResults *models.Results, resultsMutex *sync.Mutex) {
 	for weatherData := range weatherDataChan {
 		startTime := time.Now()
 		avgTemp := calculateAverageTemperature(&weatherData)
 		foggyDays := countFoggyDays(&weatherData)
 		sunnyDays := countSunnyDays(&weatherData)
-		elapsedTime := float64(time.Since(startTime).Nanoseconds()) / 1_000_000.0
-		fmt.Printf("Consumer [%d] Przetwarzanie %s zakończone w %.5f ms\n", ID, weatherData.City.Name, elapsedTime)
 
 		computedData := models.WeatherComputedData{
 			City:      weatherData.City,
@@ -28,26 +23,28 @@ func consumer(ID int, weatherDataChan <-chan models.WeatherData, resultsChan cha
 			SunnyDays: sunnyDays,
 		}
 
-		if computedData.AvgTemp > hottestCity.AvgTemp {
-			hottestCity = computedData
+		resultsMutex.Lock()
+
+		if computedData.AvgTemp > finalResults.MaxTemperature {
+			finalResults.MaxTemperature = computedData.AvgTemp
+			finalResults.HottestCity = computedData.City.Name
 		}
 
-		if computedData.FoggyDays > foggiestCity.FoggyDays {
-			foggiestCity = computedData
+		if computedData.FoggyDays > finalResults.MaxFoggyDays {
+			finalResults.MaxFoggyDays = computedData.FoggyDays
+			finalResults.FoggiestCity = computedData.City.Name
 		}
 
-		if computedData.SunnyDays > clearestCity.SunnyDays {
-			clearestCity = computedData
+		if computedData.SunnyDays > finalResults.MaxSunnyDays {
+			finalResults.MaxSunnyDays = computedData.SunnyDays
+			finalResults.ClearestCity = computedData.City.Name
 		}
+
+		resultsMutex.Unlock()
+
+		elapsedTime := float64(time.Since(startTime).Nanoseconds()) / 1_000_000.0
+		fmt.Printf("Consumer [%d] Przetwarzanie %s zakończone w %.5f ms\n", ID, weatherData.City.Name, elapsedTime)
 	}
-
-	results := models.Results{
-		HottestCity:  hottestCity.City.Name,
-		FoggiestCity: foggiestCity.City.Name,
-		ClearestCity: clearestCity.City.Name,
-	}
-
-	resultsChan <- results
 }
 
 func saveResultsToFile(results models.Results) {
