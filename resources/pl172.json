@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Katowice",
+    "lat": 50.2708,
+    "lon": 19.0399
+  },
+  {
+    "name": "Szczecin",
+    "lat": 53.4285,
+    "lon": 14.5528
+  },
+  {
+    "name": "Bydgoszcz",
+    "lat": 53.1235,
+    "lon": 18.0084
+  },
+  {
+    "name": "Lublin",
+    "lat": 51.2465,
+    "lon": 22.5684
+  }
+]
